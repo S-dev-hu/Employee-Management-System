@@ -1,6 +1,134 @@
 # Employee-Management-System
-Employee Management System
-GitHub Structure
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![SQLite](https://img.shields.io/badge/Database-SQLite-green)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+---
+
+## Overview
+
+The Employee Management System is a desktop application developed using Python, Tkinter, and SQLite that enables organizations to efficiently manage employee records.
+
+This project demonstrates practical software development skills including database design, CRUD operations, graphical user interface development, and data management.
+
+The system allows users to create, update, search, and delete employee records while maintaining data integrity through a SQLite database.
+
+---
+
+## Business Problem
+
+Many small businesses still manage employee information using spreadsheets or paper-based systems, making record maintenance difficult and error-prone.
+
+This application provides a centralized solution for:
+
+* Employee record management
+* Employee data updates
+* Employee searches
+* Data reporting
+* Secure data storage
+
+---
+
+## Key Features
+
+### Employee Management
+
+✅ Add New Employees
+
+✅ Update Employee Information
+
+✅ Delete Employee Records
+
+✅ Search Employees
+
+### Database Management
+
+✅ SQLite Database Integration
+
+✅ Persistent Data Storage
+
+✅ Fast Data Retrieval
+
+### Reporting
+
+✅ Employee Reports
+
+✅ Employee Summary Information
+
+---
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Add Employee
+
+![Add Employee](screenshots/add_employee.png)
+
+### Reports
+
+![Reports](screenshots/reports.png)
+
+---
+
+## Demo GIF
+
+![Application Demo](screenshots/demo.gif)
+
+> Record a short screen capture using ScreenToGif or OBS Studio and save it as:
+>
+> screenshots/demo.gif
+
+---
+
+## Technology Stack
+
+| Technology | Purpose                |
+| ---------- | ---------------------- |
+| Python     | Core Application Logic |
+| Tkinter    | GUI Development        |
+| SQLite     | Database Storage       |
+| Git        | Version Control        |
+| GitHub     | Portfolio Hosting      |
+
+---
+
+## System Architecture
+
+```text
++------------------+
+|      User        |
++--------+---------+
+         |
+         v
++------------------+
+| Tkinter GUI      |
+| Application UI   |
++--------+---------+
+         |
+         v
++------------------+
+| Business Logic   |
+| Employee Module  |
++--------+---------+
+         |
+         v
++------------------+
+| SQLite Database  |
+| employees.db     |
++------------------+
+```
+
+---
+
+## Project Structure
+
+```text
 Employee-Management-System/
 │
 ├── app.py
@@ -14,108 +142,78 @@ Employee-Management-System/
 ├── screenshots/
 │   ├── dashboard.png
 │   ├── add_employee.png
-│   └── reports.png
+│   ├── reports.png
+│   └── demo.gif
 │
 └── docs/
     └── project_report.pdf
-Features
+```
 
-✅ Add Employee
-
-✅ Update Employee
-
-✅ Delete Employee
-
-✅ Search Employee
-
-✅ Employee Reports
-
-✅ SQLite Database
-
-Skills Demonstrated
-Python
-SQLite
-CRUD Operations
-Data Management
-GUI Development
-Problem Solving
-README.md
-# Employee Management System
-
-## Overview
-
-The Employee Management System is a Python-based desktop application that helps organizations manage employee records efficiently.
-
-## Features
-
-- Add Employee
-- Edit Employee Information
-- Delete Employee
-- Search Employees
-- Employee Database
-- Reporting
-
-## Technologies
-
-- Python
-- Tkinter
-- SQLite
+---
 
 ## Installation
 
 ```bash
 git clone https://github.com/yourusername/Employee-Management-System.git
+
 cd Employee-Management-System
+
 pip install -r requirements.txt
+
 python app.py
 ```
 
+---
+
 ## Skills Demonstrated
 
-- Software Development
-- Database Management
-- CRUD Operations
-- Python Programming
-Core Code (app.py)
-import sqlite3
-from tkinter import *
+* Python Programming
+* SQLite Database Management
+* CRUD Operations
+* GUI Development
+* Software Design
+* Problem Solving
+* Data Management
+* Version Control with Git
 
-conn = sqlite3.connect("employees.db")
-cursor = conn.cursor()
+---
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS employees(
-id INTEGER PRIMARY KEY,
-name TEXT,
-department TEXT,
-email TEXT
-)
-""")
+## Future Enhancements
 
-conn.commit()
+* User Authentication
+* Role-Based Access Control
+* Employee Attendance Tracking
+* Export Reports to Excel
+* Export Reports to PDF
+* Email Notifications
+* Dashboard Analytics
+* Cloud Database Integration
+* REST API Development
 
-def add_employee():
-    cursor.execute(
-        "INSERT INTO employees(name,department,email) VALUES(?,?,?)",
-        (name.get(), dept.get(), email.get())
-    )
-    conn.commit()
+---
 
-root = Tk()
-root.title("Employee Management System")
+## Learning Outcomes
 
-Label(root,text="Name").grid(row=0,column=0)
-name = Entry(root)
-name.grid(row=0,column=1)
+This project strengthened practical experience in:
 
-Label(root,text="Department").grid(row=1,column=0)
-dept = Entry(root)
-dept.grid(row=1,column=1)
+* Desktop Application Development
+* Database Design
+* Data Persistence
+* Software Architecture
+* User Interface Design
+* GitHub Portfolio Development
 
-Label(root,text="Email").grid(row=2,column=0)
-email = Entry(root)
-email.grid(row=2,column=1)
+---
 
-Button(root,text="Add Employee",command=add_employee).grid(row=3,column=1)
+## Author
 
-root.mainloop()
+**Sibusiso Maseko**
+
+Aspiring Software Developer | IT Support Specialist
+
+LinkedIn:
+[www.linkedin.com/in/sibusiso-maseko-a5a21aab](http://www.linkedin.com/in/sibusiso-maseko-a5a21aab)
+
+GitHub:
+https://github.com/S-dev-hu
+
